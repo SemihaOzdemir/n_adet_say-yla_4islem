@@ -23,7 +23,7 @@ namespace n_adet_sayıyla_4islem
             Console.WriteLine("hangi işlemi yapmak istediğinizi seçiniz?");
             char islem = Convert.ToChar(Console.ReadLine());
 
-            double sonuc = Islem(islem,sayi);
+            double sonuc = Islem(islem,sayi[0]);
 
             Console.WriteLine($"işlem sonucunuz= {sonuc}");
 
@@ -65,9 +65,9 @@ namespace n_adet_sayıyla_4islem
 
 
 
-        private static double Islem(char islem, params int[] sayi)
+        public static double Islem(char islem, params int[] sayi)
         {
-            double sonuc = 0;
+            double sonuc = sayi[0];
            
 
             for (int i = 0; i < sayi.Length; i++)
